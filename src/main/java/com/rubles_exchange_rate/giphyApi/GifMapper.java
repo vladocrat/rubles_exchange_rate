@@ -1,4 +1,4 @@
-package com.rubles_exchange_rate;
+package com.rubles_exchange_rate.giphyApi;
 
 public class GifMapper {
     public Gif map(GifDTO dto) {

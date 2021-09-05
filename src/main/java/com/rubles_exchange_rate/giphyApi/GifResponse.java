@@ -1,9 +1,6 @@
-package com.rubles_exchange_rate;
+package com.rubles_exchange_rate.giphyApi;
 
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
-
 
 
 public class GifResponse {

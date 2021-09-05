@@ -1,5 +1,8 @@
 package com.rubles_exchange_rate;
 
+import com.rubles_exchange_rate.giphyApi.GifDTO;
+import com.rubles_exchange_rate.giphyApi.GifRepository;
+import com.rubles_exchange_rate.giphyApi.GiphyApi;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
