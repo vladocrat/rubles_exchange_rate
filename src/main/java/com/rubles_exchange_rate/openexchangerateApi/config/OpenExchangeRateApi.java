@@ -1,6 +1,7 @@
-package com.rubles_exchange_rate.openexchangerateApi;
+package com.rubles_exchange_rate.openexchangerateApi.config;
 
 
+import com.rubles_exchange_rate.openexchangerateApi.model.CurrencyDTO;
 import feign.Param;
 import feign.RequestLine;
 import org.springframework.cloud.openfeign.FeignClient;

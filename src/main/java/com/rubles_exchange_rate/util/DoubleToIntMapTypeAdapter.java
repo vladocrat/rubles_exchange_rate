@@ -1,4 +1,4 @@
-package com.rubles_exchange_rate;
+package com.rubles_exchange_rate.util;
 
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;

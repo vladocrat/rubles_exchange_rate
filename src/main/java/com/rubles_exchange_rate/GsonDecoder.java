@@ -23,7 +23,7 @@ public class GsonDecoder implements Decoder {
     }
 
     public GsonDecoder() {
-        this(Collections.<TypeAdapter<?>>emptyList());
+        this(Collections.emptyList());
     }
 
     public GsonDecoder(Gson gson) {
@@ -39,7 +39,7 @@ public class GsonDecoder implements Decoder {
             return gson.fromJson(reader, type);
         } catch (JsonIOException e) {
             if (e.getCause() != null && e.getCause() instanceof IOException) {
-                throw IOException.class.cast(e.getCause());
+                throw (IOException) e.getCause();
             }
             throw e;
         } finally {

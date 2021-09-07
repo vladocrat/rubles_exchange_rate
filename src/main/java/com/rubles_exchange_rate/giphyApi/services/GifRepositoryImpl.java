@@ -1,4 +1,10 @@
-package com.rubles_exchange_rate.giphyApi;
+package com.rubles_exchange_rate.giphyApi.services;
+
+import com.rubles_exchange_rate.giphyApi.repositories.GifRepository;
+import com.rubles_exchange_rate.giphyApi.models.GifResponse;
+import com.rubles_exchange_rate.giphyApi.config.GiphyApi;
+import com.rubles_exchange_rate.giphyApi.config.GiphyApiConfig;
+import com.rubles_exchange_rate.giphyApi.models.GifDTO;
 
 public class GifRepositoryImpl implements GifRepository {
     private GiphyApi api;

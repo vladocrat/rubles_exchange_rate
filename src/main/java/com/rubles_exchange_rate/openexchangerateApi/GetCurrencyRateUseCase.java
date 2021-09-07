@@ -1,5 +1,11 @@
 package com.rubles_exchange_rate.openexchangerateApi;
 
+import com.rubles_exchange_rate.openexchangerateApi.config.OpenExchangeRateApiConfig;
+import com.rubles_exchange_rate.openexchangerateApi.model.Currency;
+import com.rubles_exchange_rate.openexchangerateApi.model.CurrencyDTO;
+import com.rubles_exchange_rate.openexchangerateApi.repositories.OpenExchangeRateRepository;
+import com.rubles_exchange_rate.openexchangerateApi.util.CurrencyMapper;
+
 import java.time.LocalDate;
 import java.util.List;
 

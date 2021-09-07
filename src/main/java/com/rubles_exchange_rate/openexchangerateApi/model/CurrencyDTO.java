@@ -1,4 +1,4 @@
-package com.rubles_exchange_rate.openexchangerateApi;
+package com.rubles_exchange_rate.openexchangerateApi.model;
 
 import com.google.gson.annotations.SerializedName;
 

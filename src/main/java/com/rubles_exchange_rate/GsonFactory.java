@@ -7,6 +7,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapter;
 import com.google.gson.reflect.TypeToken;
+import com.rubles_exchange_rate.util.DoubleToIntMapTypeAdapter;
+import com.rubles_exchange_rate.util.MyLocalDateDeserializer;
+
 import java.lang.reflect.Type;
 import java.time.LocalDate;
 import java.util.Map;
@@ -16,7 +19,7 @@ final class GsonFactory {
 
     private GsonFactory() {}
 
-    static Gson create(Iterable<TypeAdapter<?>> adapters) {
+    public static Gson create(Iterable<TypeAdapter<?>> adapters) {
         GsonBuilder builder = new GsonBuilder().setPrettyPrinting();
         builder.registerTypeAdapter(new TypeToken<Map<String, Object>>() {}.getType(),
                 new DoubleToIntMapTypeAdapter());

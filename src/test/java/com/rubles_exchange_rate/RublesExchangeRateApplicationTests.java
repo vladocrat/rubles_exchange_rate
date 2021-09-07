@@ -1,9 +1,12 @@
 package com.rubles_exchange_rate;
 
-import com.rubles_exchange_rate.giphyApi.GifDTO;
-import com.rubles_exchange_rate.giphyApi.GifRepository;
-import com.rubles_exchange_rate.giphyApi.GiphyApi;
-import com.rubles_exchange_rate.openexchangerateApi.*;
+import com.rubles_exchange_rate.giphyApi.repositories.GifRepository;
+import com.rubles_exchange_rate.giphyApi.config.GiphyApi;
+import com.rubles_exchange_rate.openexchangerateApi.config.OpenExchangeRateApi;
+import com.rubles_exchange_rate.openexchangerateApi.config.OpenExchangeRateApiConfig;
+import com.rubles_exchange_rate.openexchangerateApi.model.CurrencyDTO;
+import com.rubles_exchange_rate.openexchangerateApi.repositories.OpenExchangeRateRepository;
+import com.rubles_exchange_rate.openexchangerateApi.services.OpenExchangeRateRepositoryImpl;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -59,11 +62,5 @@ class RublesExchangeRateApplicationTests {
 
 	}
 
-	@Test
-	void testRandomGif() {
-		GifDTO actual = repository.getRandomGif("MLP");
-		GifDTO expected = new GifDTO();
-		assertEquals(expected, actual);
-	}
 
 }

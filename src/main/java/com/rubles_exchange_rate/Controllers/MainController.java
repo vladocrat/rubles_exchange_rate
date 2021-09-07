@@ -2,21 +2,39 @@ package com.rubles_exchange_rate.Controllers;
 
 import com.rubles_exchange_rate.GsonDecoder;
 import com.rubles_exchange_rate.giphyApi.*;
+import com.rubles_exchange_rate.giphyApi.config.GiphyApi;
+import com.rubles_exchange_rate.giphyApi.config.GiphyApiConfig;
+import com.rubles_exchange_rate.giphyApi.models.Gif;
+import com.rubles_exchange_rate.giphyApi.repositories.GifRepository;
+import com.rubles_exchange_rate.giphyApi.services.GifRepositoryImpl;
 import com.rubles_exchange_rate.openexchangerateApi.*;
+import com.rubles_exchange_rate.openexchangerateApi.config.OpenExchangeRateApi;
+import com.rubles_exchange_rate.openexchangerateApi.config.OpenExchangeRateApiConfig;
+import com.rubles_exchange_rate.openexchangerateApi.model.Currency;
+import com.rubles_exchange_rate.openexchangerateApi.repositories.OpenExchangeRateRepository;
+import com.rubles_exchange_rate.openexchangerateApi.services.OpenExchangeRateRepositoryImpl;
 import feign.Feign;
 import feign.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+
+
 @Controller
 public class MainController {
+    @Autowired
+    private Environment env;
+
+
     private GiphyApiConfig giphyApiConfig = new GiphyApiConfig("https://api.giphy.com/",
             "XqfoKHCqG1qMCneQDCfKZN4BOvbRDY1C",
             "v1");
@@ -44,11 +62,9 @@ public class MainController {
             openExchangeRateApiConfig);
 
 
-
-
     @GetMapping("/")
     public String index(Model model) {
-        List<String> symbols = Stream.of("USD").collect(Collectors.toList());
+        List<String> symbols = Stream.of(env.getProperty("currency")).collect(Collectors.toList());
         Currency todayRate = getCurrencyRateUseCase.execute(LocalDate.now(), "RUB", symbols);
         Currency yesterdayRate = getCurrencyRateUseCase.execute(LocalDate.now().minusDays(1), "RUB", symbols);
 

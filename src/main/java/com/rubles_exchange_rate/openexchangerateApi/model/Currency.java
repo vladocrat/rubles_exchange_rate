@@ -1,4 +1,4 @@
-package com.rubles_exchange_rate.openexchangerateApi;
+package com.rubles_exchange_rate.openexchangerateApi.model;
 
 
 public class Currency implements Comparable<Currency>{

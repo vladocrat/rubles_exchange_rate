@@ -1,4 +1,4 @@
-package com.rubles_exchange_rate.giphyApi;
+package com.rubles_exchange_rate.giphyApi.models;
 
 public class Image {
     private String url;

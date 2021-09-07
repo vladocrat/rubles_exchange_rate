@@ -1,4 +1,4 @@
-package com.rubles_exchange_rate.giphyApi;
+package com.rubles_exchange_rate.giphyApi.config;
 
 public class GiphyApiConfig{
     private String endpoint;

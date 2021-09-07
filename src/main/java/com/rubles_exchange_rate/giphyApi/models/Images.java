@@ -1,5 +1,7 @@
-package com.rubles_exchange_rate.giphyApi;
+package com.rubles_exchange_rate.giphyApi.models;
 
+
+import com.rubles_exchange_rate.giphyApi.models.Image;
 
 public class Images {
     private Image original;
