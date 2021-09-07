@@ -2,6 +2,8 @@
 
 *Work in progress*
 
+All the quiries have the base of RUB currency
+
 The app returns different gifs by given tags(using GIPHY API) dependent on the exchange rate of a currency (Defaults to USD) compared to ruble(using openexchangerates API) 
 
 For example: 1 ruble is 0.0136 part of a USD and if tomorrow it will change to lets say 0.154 you will get a random gif from this selection https://giphy.com/search/rich (tag is the word at the end of the link, rich in this case), otherwise a random gif from this selection https://giphy.com/search/broke will be recieved. 
