@@ -47,7 +47,7 @@ services:
       server.port: 8081
       server.adress: 0.0.0.0
 ```
-4) open the dir where your .yml file config is stored and write the following:
+4) open the teminal in dir where your .yml file config is stored and write the following:
 
 ```shell
 docker-compose -f docker-compose.yml up -d
