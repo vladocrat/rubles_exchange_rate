@@ -52,7 +52,7 @@ services:
 ```shell
 docker-compose -f docker-compose.yml up -d
 ```
-5) go to the http://localhost:8081/ and you everything should work just fine
+5) go to the http://localhost:8081/. Everything should work just fine
 
 to stop the program from running you can just close the terminal or write the following: 
 
