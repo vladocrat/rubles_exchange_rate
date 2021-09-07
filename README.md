@@ -26,7 +26,7 @@ docker-compose --version
 2) pull the image using docker pull command:
 
 ```shell
-docker pull sherlotta/springboot-docker-compose-app 
+docker pull sherlotta/springboot-docker-compose-app:1 
 ```
 3) create a config file called docker-compose.yml and paste the following code in:
 
