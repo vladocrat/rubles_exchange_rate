@@ -2,7 +2,7 @@
 
 *Work in progress*
 
-All the quiries have the base of RUB currency
+All the quiries have the base of RUB currency compared to USD. Manual settings are still work in progress
 
 The app returns different gifs by given tags(using GIPHY API) dependent on the exchange rate of a currency (Defaults to USD) compared to ruble(using openexchangerates API) 
 
